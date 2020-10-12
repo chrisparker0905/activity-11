@@ -49,10 +49,8 @@ int main()
     string orderID; 
     char orderType; 
 
-    int amountOfPartsOrderedA;
-    int amountOfPartsOrderedB;
-    int amountOfPartsOrderedC;
-    int amountOfPartsOrderedD;
+    int amountOfPartsOrdered;
+
     double costOfEachPart; 
 
 
@@ -64,19 +62,12 @@ int main()
         //example of how object ourFile works. 
         ourFile >> orderID; 
         ourFile >> orderType; 
-        ourFile >> amountOfPartsOrderedA;
-        ourFile >> amountOfPartsOrderedB;
-        ourFile >> amountOfPartsOrderedC;
-        ourFile >> amountOfPartsOrderedD;
+        ourFile >> amountOfPartsOrdered;
         ourFile >> costOfEachPart;
 
-        ourFile >> orderID1;
 
-        double costOfEachPartA;
-        double costOfEachPartB;
-        double costOfEachPartC;
-        double costOfEachPartD;
-        double costOfEachPartUnknown;
+        double costOfEachPart;
+
 
         double totalCostPartsA = 0; 
         double totalCostPartsB = 0;
@@ -88,7 +79,7 @@ int main()
         switch (orderType) {
         case 'A': {
 
-            oneLineCostA = amountOfPartsOrderedA * costOfEachPartA; 
+            oneLineCostA = amountOfPartsOrdered * costOfEachPart; 
             totalCostPartsA += oneLineCostA; 
 
 
@@ -96,14 +87,14 @@ int main()
         }
         case 'B': {
 
-            oneLineCostB = amountOfPartsOrderedB * costOfEachPartB;
+            oneLineCostB = amountOfPartsOrdered * costOfEachPart;
             totalCostPartsB += oneLineCostB;
 
             break; 
         }
         case 'C': {
 
-            oneLineCostC = amountOfPartsOrderedC * costOfEachPartC;
+            oneLineCostC = amountOfPartsOrdered * costOfEachPart;
             totalCostPartsC += oneLineCostC;
 
             break; 
@@ -111,7 +102,7 @@ int main()
         }
         case 'D': {
 
-            oneLineCostD = amountOfPartsOrderedD * costOfEachPartD;
+            oneLineCostD = amountOfPartsOrdered * costOfEachPart;
             totalCostPartsD += oneLineCostD;
 
             break; 
