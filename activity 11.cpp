@@ -65,6 +65,9 @@ int main()
         ourFile >> orderID; 
         ourFile >> orderType; 
         ourFile >> amountOfPartsOrderedA;
+        ourFile >> amountOfPartsOrderedB;
+        ourFile >> amountOfPartsOrderedC;
+        ourFile >> amountOfPartsOrderedD;
         ourFile >> costOfEachPart;
 
         ourFile >> orderID1;
@@ -79,37 +82,37 @@ int main()
         double totalCostPartsB = 0;
         double totalCostPartsC = 0;
         double totalCostPartsD = 0;
-        double oneLineCost; 
+        double oneLineCostA, oneLineCostB, oneLineCostC, oneLineCostD; 
 
 
         switch (orderType) {
         case 'A': {
 
-            oneLineCost = amountOfPartsOrderedA * costOfEachPartA; 
-            totalCostPartsA += oneLineCost; 
+            oneLineCostA = amountOfPartsOrderedA * costOfEachPartA; 
+            totalCostPartsA += oneLineCostA; 
 
 
             break; 
         }
         case 'B': {
 
-            oneLineCost = amountOfPartsOrderedB * costOfEachPartB;
-            totalCostPartsB += oneLineCost;
+            oneLineCostB = amountOfPartsOrderedB * costOfEachPartB;
+            totalCostPartsB += oneLineCostB;
 
             break; 
         }
         case 'C': {
 
-            oneLineCost = amountOfPartsOrderedC * costOfEachPartC;
-            totalCostPartsC += oneLineCost;
+            oneLineCostC = amountOfPartsOrderedC * costOfEachPartC;
+            totalCostPartsC += oneLineCostC;
 
             break; 
 
         }
         case 'D': {
 
-            oneLineCost = amountOfPartsOrderedD * costOfEachPartD;
-            totalCostPartsD += oneLineCost;
+            oneLineCostD = amountOfPartsOrderedD * costOfEachPartD;
+            totalCostPartsD += oneLineCostD;
 
             break; 
         }
